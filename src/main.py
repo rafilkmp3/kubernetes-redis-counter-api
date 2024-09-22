@@ -17,8 +17,7 @@ def read_counter():
 @app.route('/write', methods=['POST'])
 def increment_counter():
     redis_client.incr('counter')
-    new_value = int(redis_client.get('counter'))
-    return jsonify({"counter": new_value})
+    return '', 204
 
 @app.route('/healthz', methods=['GET'])
 def liveness_check():
@@ -27,7 +26,6 @@ def liveness_check():
 @app.route('/ready', methods=['GET'])
 def readiness_check():
     try:
-        # Check if Redis is accessible
         redis_client.ping()
         return jsonify({"status": "ready"}), 200
     except redis.exceptions.ConnectionError:
