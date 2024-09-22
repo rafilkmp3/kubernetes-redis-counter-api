@@ -1,6 +1,7 @@
 # Kubernetes Redis Counter API
 
-[![Build and Push Multi-Arch Docker Image](https://github.com/rafilkmp3/kubernetes-redis-counter-api/actions/workflows/docker-build-push.yml/badge.svg)](https://github.com/rafilkmp3/kubernetes-redis-counter-api/actions/workflows/docker-build-push.yml)
+[![Build and Push Multi-Arch Docker Image](https://github.com/rafilkmp3/kubernetes-redis-counter-api/actions/workflows/docker-image.yml/badge.svg)](https://github.com/rafilkmp3/kubernetes-redis-counter-api/actions/workflows/docker-image.yml)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple API that increments a counter persisted in Redis, containerized and designed for deployment to Kubernetes using Helm.
@@ -141,7 +142,7 @@ For full configuration options, refer to the `values.yaml` file in the `helm` di
 
 This project uses GitHub Actions for CI/CD. The workflow builds and pushes a multi-architecture Docker image to GitHub Container Registry on pushes to the `main` branch.
 
-For details, see [.github/workflows/docker-build-push.yml](.github/workflows/docker-build-push.yml).
+For details, see [.github/workflows/docker-image.yml](.github/workflows/docker-image.yml).
 
 ## Security Considerations
 
