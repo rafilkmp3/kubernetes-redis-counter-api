@@ -89,7 +89,7 @@ application:
 
   # Ingress object for exposing services (optional)
   ingress:
-    enabled: true
+    enabled: false
     # Name of the ingress class
     ingressClassName: nginx
     # List of host addresses to be exposed by this Ingress
