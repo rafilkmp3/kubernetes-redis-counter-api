@@ -84,8 +84,15 @@ application:
         name: http
         protocol: TCP
         targetPort: 5000
-    type: ClusterIP
+    type: NodePort
 
   # Ingress object for exposing services (optional)
   ingress:
     enabled: true
+    # Name of the ingress class
+    ingressClassName: nginx
+    # List of host addresses to be exposed by this Ingress
+    hosts:
+      - host: '{{ .Release.Name }}.local'
+        paths:
+        - path: /

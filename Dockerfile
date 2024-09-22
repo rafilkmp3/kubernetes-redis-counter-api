@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.12-slim
 
 # Create a non-root user and group with a specific UID and GID
 RUN groupadd -g 1001 appgroup && useradd -u 1001 -g appgroup -s /bin/false appuser
