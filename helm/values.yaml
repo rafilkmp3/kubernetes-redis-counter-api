@@ -77,6 +77,7 @@ application:
     enabled: true
     minAvailable: 1
     maxUnavailable: 2
+
   # Service object for servicing pods
   service:
     ports:
