@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -41,6 +38,13 @@ jobs:
         platforms: linux/amd64,linux/arm64,linux/arm/v7
         push: true
         tags: ghcr.io/${{ github.repository }}:latest
+        labels: |
+          org.opencontainers.image.title="Kubernetes Redis Counter API"
+          org.opencontainers.image.description="A Docker image for a Redis counter API used in Kubernetes."
+          org.opencontainers.image.authors="Rafael Sathler <rafaelbsathler@gmail.com>"
+          org.opencontainers.image.version="1.0.0"
+          org.opencontainers.image.url="https://github.com/rafilkmp3/kubernetes-redis-counter-api"
+          org.opencontainers.image.licenses="MIT"
 
     - name: Verify Docker image
       run: docker images ghcr.io/${{ github.repository }}:latest

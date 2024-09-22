@@ -35,7 +35,7 @@ application:
 
     # Image of the app container
     image:
-      repository: counter-api
+      repository: ghcr.io/rafilkmp3/kubernetes-redis-counter-api
       tag: latest
       pullPolicy: IfNotPresent
 
