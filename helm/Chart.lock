@@ -1,0 +1,9 @@
+dependencies:
+- name: application
+  repository: https://stakater.github.io/stakater-charts
+  version: 4.2.8
+- name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: 17.9.5
+digest: sha256:edf58713f287631867414df69c8f44777cc9402b508a8888692748ee1bb8de59
+generated: "2024-09-22T14:05:11.860566-03:00"
